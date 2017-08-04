@@ -11,12 +11,24 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => ['web']], function () {
+    //
+    Route::get('/', function () {
+        return view('welcome');
+    });
+
+    Auth::routes();
+
+    Route::get('/home', 'HomeController@index')->name('home');
+
+    Route::resource('/user', 'UserController');
+    Route::resource('/address', 'AddressController');
+    Route::resource('/user-address', 'UserAddressController');
+
+
+
+
+
+
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::resource('/user', 'UserController');

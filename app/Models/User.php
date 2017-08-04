@@ -26,4 +26,13 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function addresses(){
+        return $this->hasManyThrough('App\Models\Address', 'App\Models\UserAddress', 'user_id', 'id', 'id');
+    }
+
+
+    public function phoneNumbers(){
+        return $this->hasManyThrough('App\Models\PhoneNumber', 'App\Models\UserPhoneNumber', 'user_id', 'id');
+    }
 }

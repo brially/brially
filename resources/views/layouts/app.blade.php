@@ -73,7 +73,12 @@
                 </div>
             </div>
         </nav>
-
+        @if(isset($message))
+            <div class="alert alert-{{ $message_status }} alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>{{ camel_case($message_status) }}!</strong> {{$message}}
+            </div>
+        @endif
         @yield('content')
     </div>
 
