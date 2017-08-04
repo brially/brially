@@ -87,7 +87,7 @@ class UserAddressController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\UserAddress  $userAddress
+     * @param  \App\Models\UserAddress  $userAddress
      * @return \Illuminate\Http\Response
      */
     public function edit(UserAddress $userAddress)
@@ -99,7 +99,7 @@ class UserAddressController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\UserAddress  $userAddress
+     * @param  \App\Models\UserAddress  $userAddress
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, UserAddress $userAddress)
@@ -110,7 +110,7 @@ class UserAddressController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\UserAddress  $userAddress
+     * @param  \App\Models\UserAddress  $userAddress
      * @return \Illuminate\Http\Response
      */
     public function destroy(UserAddress $userAddress)

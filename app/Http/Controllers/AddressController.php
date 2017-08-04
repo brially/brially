@@ -41,7 +41,7 @@ class AddressController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Address  $address
+     * @param  \App\Models\Address  $address
      * @return \Illuminate\Http\Response
      */
     public function show(Address $address)
@@ -52,7 +52,7 @@ class AddressController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Address  $address
+     * @param  \App\Models\Address  $address
      * @return \Illuminate\Http\Response
      */
     public function edit(Address $address)
@@ -64,7 +64,7 @@ class AddressController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Address  $address
+     * @param  \App\Models\Address  $address
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Address $address)
@@ -78,15 +78,16 @@ class AddressController extends Controller
 
         $address->update($request->only('address', 'address2', 'city', 'state', 'post_code', 'country'));
         $address->save();
+        session()->flash('message', 'Your address has been added to your profile')->flash( 'message-status', 'success');
         return redirect()->action(
             'AddressController@edit', [$address]
-        )->with('message', 'Your address has been added to your profile')->with( 'message-status', 'success');
+        );
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Address  $address
+     * @param  \App\Models\Address  $address
      * @return \Illuminate\Http\Response
      */
     public function destroy(Address $address)

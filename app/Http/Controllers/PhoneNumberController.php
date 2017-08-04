@@ -41,7 +41,7 @@ class PhoneNumberController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\PhoneNumber  $phoneNumber
+     * @param  \App\Models\PhoneNumber  $phoneNumber
      * @return \Illuminate\Http\Response
      */
     public function show(PhoneNumber $phoneNumber)
@@ -52,7 +52,7 @@ class PhoneNumberController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\PhoneNumber  $phoneNumber
+     * @param  \App\Models\PhoneNumber  $phoneNumber
      * @return \Illuminate\Http\Response
      */
     public function edit(PhoneNumber $phoneNumber)
@@ -64,7 +64,7 @@ class PhoneNumberController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\PhoneNumber  $phoneNumber
+     * @param  \App\Models\PhoneNumber  $phoneNumber
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, PhoneNumber $phoneNumber)
@@ -75,7 +75,7 @@ class PhoneNumberController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\PhoneNumber  $phoneNumber
+     * @param  \App\Models\PhoneNumber  $phoneNumber
      * @return \Illuminate\Http\Response
      */
     public function destroy(PhoneNumber $phoneNumber)

@@ -73,10 +73,10 @@
                 </div>
             </div>
         </nav>
-        @if(isset($message))
-            <div class="alert alert-{{ $message_status }} alert-dismissible" role="alert">
+        @if(session()->exists('message'))
+            <div class="alert alert-{{ session('message_status') }} alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <strong>{{ camel_case($message_status) }}!</strong> {{$message}}
+                <strong>{{ camel_case(session('message_status')) }}!</strong> {{session('message')}}
             </div>
         @endif
         @yield('content')
