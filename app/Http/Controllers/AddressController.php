@@ -14,7 +14,7 @@ class AddressController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -78,7 +78,7 @@ class AddressController extends Controller
 
         $address->update($request->only('address', 'address2', 'city', 'state', 'post_code', 'country'));
         $address->save();
-        session()->flash('message', 'Your address has been added to your profile')->flash( 'message-status', 'success');
+        //session()->flash('message', 'Your address has been added to your profile')->flash( 'message-status', 'success');
         return redirect()->action(
             'AddressController@edit', [$address]
         );
@@ -95,3 +95,4 @@ class AddressController extends Controller
         //
     }
 }
+
