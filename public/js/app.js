@@ -1200,15 +1200,15 @@ window.Vue = __webpack_require__(38);
 Vue.component('example', __webpack_require__(39));
 Vue.component('user-actions', __webpack_require__(42));
 
-var app = new Vue({
-    el: '#app'
-});
-
 Vue.component('passport-clients', __webpack_require__(45));
 
 Vue.component('passport-authorized-clients', __webpack_require__(51));
 
 Vue.component('passport-personal-access-tokens', __webpack_require__(56));
+
+var app = new Vue({
+    el: '#app'
+});
 
 /***/ }),
 /* 13 */

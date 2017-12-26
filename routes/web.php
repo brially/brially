@@ -24,6 +24,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::resource('/user', 'UserController');
     Route::resource('/address', 'AddressController');
     Route::resource('/user-address', 'UserAddressController');
+    Route::resource('/api-manager', 'ApiManagerController');
 
 
 

@@ -20,6 +20,7 @@
                 </div>
 
                 <div class="panel-body">
+
                     <ul  class="list-group">
                         <li  class="list-group-item"><span class="label label-default">First</span> {{ $user->first_name }}</li>
                         <li  class="list-group-item"><span class="label label-default">Middle</span> {{ $user->middle_name }}</li>
