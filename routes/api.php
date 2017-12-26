@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::group(['middleware' => ['auth:api'], 'namesp'=>'Api'], function () {
+Route::group(['middleware' => ['auth:api'], 'namespace'=>'Api'], function () {
 
     Route::resource('/user', 'UserController');
 
