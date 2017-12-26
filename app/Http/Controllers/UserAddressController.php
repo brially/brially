@@ -70,7 +70,9 @@ class UserAddressController extends Controller
             ]);
         }
 
-        return redirect(action('UserController@show', $user ))->with('message', 'Your address has been added to your profile')->with('message-status', 'success');
+        return redirect(action('UserController@show', $user ))
+            ->with('message', 'Your address has been added to your profile')
+            ->with('message-status', 'success');
     }
 
     /**
